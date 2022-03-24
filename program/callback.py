@@ -8,6 +8,7 @@ from config import (
     BOT_NAME,
     BOT_USERNAME,
     GROUP_SUPPORT,
+    SOHBET_GROUP,
     OWNER_NAME,
     UPDATES_CHANNEL,
 )
@@ -37,15 +38,15 @@ async def cbstart(_, query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton(
-                        "💭 Söhbət Group", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "⚙️ Support", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "🌐 Support", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "📣 Rəsmi Kanal", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "🎵 Musiqi Kanalı", url="https://t.me/BS_Kanall"
+                        "🗨️ Söhbət Group", url="https://t.me/{SOHBET_GROUP}"
                     )
                 ],
             ]
@@ -70,7 +71,7 @@ async def cbguides(_, query: CallbackQuery):
 
 💡 **Bu bot haqqında əlavə suallarınız varsa, onu buradakı dəstək söhbətimdə deyə bilərsiniz: @{GROUP_SUPPORT}**
 
-⚡ __𝐍 𝐄 𝐗 𝐔 𝐒 {BOT_NAME} __""",
+⚡ __{BOT_NAME} __""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Geri", callback_data="cbstart")]]
         ),
@@ -84,7 +85,7 @@ async def cbcmds(_, query: CallbackQuery):
 
 » **izahatı oxumaq və mövcud əmrlərin siyahısına baxmaq üçün aşağıdakı düyməni basın! !**
 
-⚡ __𝐍 𝐄 𝐗 𝐔 𝐒 {BOT_NAME} __""",
+⚡ __{BOT_NAME} __""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -118,7 +119,7 @@ async def cbbasic(_, query: CallbackQuery):
 » /uptime - botun işləmə müddətini göstərin
 » /alive - botun canlı məlumatını göstərin (qrupda)
 
-⚡️ __𝐍 𝐄 𝐗 𝐔 𝐒 {BOT_NAME} __""",
+⚡️ __{BOT_NAME} __""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Geri", callback_data="cbcmds")]]
         ),
@@ -141,7 +142,7 @@ async def cbadmin(_, query: CallbackQuery):
 » /userbotjoin - istifadəçi robotunu qrupa qoşulmağa dəvət edin
 » /userbotleave - userbot-a qrupdan çıxmağı əmr edin
 
-⚡️ __𝐍 𝐄 𝐗 𝐔 𝐒 {BOT_NAME} __""",
+⚡️ __{BOT_NAME} __""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Geri", callback_data="cbcmds")]]
         ),
@@ -159,7 +160,7 @@ async def cbsudo(_, query: CallbackQuery):
 » /yenile - botunuzu yenidən başladın
 » /leaveall - userbotun bütün qrupdan çıxmasını əmr edin
 
-⚡ __𝐍 𝐄 𝐗 𝐔 𝐒 {BOT_NAME} __""",
+⚡ __{BOT_NAME} __""",
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Geri", callback_data="cbcmds")]]
         ),
