@@ -8,6 +8,7 @@ from config import (
     BOT_NAME,
     BOT_USERNAME,
     GROUP_SUPPORT,
+    SOHBET_GROUP
     OWNER_NAME,
     UPDATES_CHANNEL,
 )
@@ -68,22 +69,22 @@ async def start_(client: Client, message: Message):
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("❓ Yardım Düyməsi", callback_data="cbhowtouse")],
+                [InlineKeyboardButton("❓ Yardım ", callback_data="cbhowtouse")],
                 [
                     InlineKeyboardButton("📚 Əmirlər", callback_data="cbcmds"),
                     InlineKeyboardButton("👨🏻‍💻 Sahibi", url=f"https://t.me/{OWNER_NAME}"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "💭 Söhbət Group", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "🛠️ Support", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "🌐 Support", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "📣 Rəsmi Kanal", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "🎵 Musiqi Kanalı", url="https://t.me/BS_Kanall"
+                        "🗨️ Söhbət Group", url="https://t.me/{SOHBET_GROUP}"
                     )
                 ],
             ]
@@ -153,7 +154,7 @@ async def new_chat(c: Client, m: Message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("💭 Gurupmuz", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                            InlineKeyboardButton("📣Rəsmi Kanal", url=f"https://t.me/{UPDATES_CHANNEL}"),
                             InlineKeyboardButton("🌐 Support", url=f"https://t.me/{GROUP_SUPPORT}")
                         ],
                         [
